@@ -1,0 +1,121 @@
+body {
+  background: #000;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.rate-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+  color: #fff;
+}
+
+.rate-box {
+  background: #1a1d2b;
+  width: 520px;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #0009;
+  border: 1px solid #2d3248;
+}
+
+.title {
+  color: #4db0ff;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #b5b5b5;
+  margin-bottom: 25px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+}
+
+.username {
+  font-size: 18px;
+  color: #fff;
+}
+
+.game {
+  color: #b5b5b5;
+  font-size: 14px;
+}
+
+.details {
+  font-size: 12px;
+  color: #89c2ff;
+}
+
+.question {
+  margin-top: 20px;
+  font-size: 17px;
+}
+
+.stars {
+  margin: 15px 0 20px;
+  font-size: 28px;
+}
+
+.star {
+  cursor: pointer;
+  color: #555;
+  margin-right: 5px;
+  transition: 0.2s;
+}
+
+.star.filled {
+  color: #ffd900;
+}
+
+.feedback-label {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #c4c4c4;
+}
+
+.feedback-input {
+  width: 100%;
+  height: 90px;
+  border-radius: 10px;
+  background: #141622;
+  border: 1px solid #2d3248;
+  padding: 10px;
+  color: white;
+  resize: none;
+  margin-bottom: 20px;
+}
+
+.submit-btn {
+  width: 100%;
+  background: #3d6ded;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.submit-btn:hover {
+  background: #2f59cb;
+}
+
+.footer {
+  margin-top: 40px;
+  font-size: 13px;
+  color: #777;
+}
