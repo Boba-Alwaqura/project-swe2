@@ -1,19 +1,18 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import RatePage from './Component/RatePage/RatePage'
 import RequestForm from './Component/RequestForm/RequestForm'
+import { Routes, Route } from "react-router-dom";
+import Home from "./Component/Home/Home";
+import Landing from "./Component/Landing/Landing"
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <>
-      <RatePage />
-      <RequestForm />
-    </>
-  )
+    <Routes>
+      <Route path="/" element={<Landing />} />
+      <Route path="/home" element={<Home />} />
+      <Route path="/ratepage" element={<RatePage />} />
+      <Route path="/requestform" element={<RequestForm />} />
+    </Routes>
+  );
 }
-
-export default App
