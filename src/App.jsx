@@ -13,7 +13,7 @@ import SignUp from './Component/Sign/SignUp';
 
 export default function App() {
   const [user, setUser] = useState(null); // المستخدم الحالي
-  const [users, setUsers] = useState([]); // كل الحسابات المسجلة
+  const [users, setUsers] = useState([]); 
 
   const routers = createBrowserRouter([
     {
