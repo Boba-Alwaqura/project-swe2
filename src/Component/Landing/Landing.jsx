@@ -1,14 +1,11 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./landing.css";
 import { ChevronRight, Users } from "lucide-react";
-import Navbar from "/src/Component/Navbar/Navbar.jsx";
-import Footer from "/src/Component/Footer/Footer.jsx";
 
 
 export default function Landing() {
   return (
     <div className="landing-page">
-      <Navbar />
 
       {/* Hero Section */}
       <section className="hero-section">
@@ -149,8 +146,6 @@ export default function Landing() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 }

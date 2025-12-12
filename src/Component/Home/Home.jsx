@@ -1,7 +1,4 @@
 import "./Home.css";
-import Navbar from "/src/Component/Navbar/Navbar.jsx";
-import Footer from "/src/Component/Footer/Footer.jsx";
-
 
 // Import game thumbnails (keep your images)
 import fort from "/src/assets/images/fortnite.jpg";
@@ -12,6 +9,7 @@ import lol from "/src/assets/images/lol.jpg";
 import pubg from "/src/assets/images/pubg.jpg";
 import mc from "/src/assets/images/mc.jpg";
 import ow from "/src/assets/images/ow.jpg";
+import { Link } from "lucide-react";
 
 export default function Home() {
   const games = [
@@ -27,9 +25,7 @@ export default function Home() {
 
   return (
     <div className="home-page">
-      <Navbar />
       
-     
       {/* HERO */}
       <section className="hero-section">
         <div className="container text-center py-5">
@@ -57,7 +53,7 @@ export default function Home() {
           <div className="row g-4 justify-content-center">
             {games.map((game) => (
               <div key={game.title} className="col-6 col-sm-4 col-md-3 col-lg-2">
-                <a href={game.link} className="game-card glass">
+                <Link to={game.link} className="game-card glass">
                   <div className="game-img-wrapper">
                     <img src={game.image} alt={game.title} className="game-img" />
                     <div className="game-overlay">
@@ -65,7 +61,7 @@ export default function Home() {
                     </div>
                   </div>
                   <h3 className="game-title text-gradient mt-3">{game.title}</h3>
-                </a>
+                </Link>
               </div>
             ))}
           </div>
@@ -97,7 +93,6 @@ export default function Home() {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 }

@@ -1,23 +1,68 @@
-body {
-  background: #000;
-  font-family: "Segoe UI", sans-serif;
+/* ---------------- PAGE BACKGROUND LIKE LANDING PAGE ---------------- */
+
+.rate-page {
+  min-height: 100vh;
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  background:
+    radial-gradient(circle at 20% 80%, rgba(110, 30, 255, 0.35), transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(0, 242, 255, 0.25), transparent 50%),
+    linear-gradient(135deg, #0d0d1f 0%, #12122e 100%);
+  position: relative;
+  color: white;
 }
 
-.rate-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 60px;
-  color: #fff;
+.rate-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(0deg,
+      transparent,
+      transparent 2px,
+      rgba(110, 30, 255, 0.03) 2px,
+      rgba(110, 30, 255, 0.03) 4px);
+  animation: scan 12s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes scan {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(4px);
+  }
+}
+
+/* ---------------- RATE CARD ---------------- */
+
+.glass-card {
+  background: rgba(31, 31, 45, 0.82);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(110, 30, 255, 0.45);
+  border-radius: 1rem;
+  padding: 30px 0;
+  transition: 0.4s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 242, 255, 0.4);
+  border-color: var(--cyan);
 }
 
 .rate-box {
-  background: #1a1d2b;
-  width: 520px;
-  padding: 35px;
-  border-radius: 15px;
-  box-shadow: 0 0 15px #0009;
-  border: 1px solid #2d3248;
+  width: 550px;
+  padding: 30px;
+  margin: auto;
+}
+
+/* ---------------- CONTENT ---------------- */
+
+.center {
+  text-align: center;
 }
 
 .title {
@@ -31,11 +76,13 @@ body {
   margin-bottom: 25px;
 }
 
+/* PROFILE */
+
 .profile {
   display: flex;
   align-items: center;
   gap: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .avatar {
@@ -44,78 +91,96 @@ body {
   border-radius: 50%;
 }
 
-.username {
+.profile .username {
   font-size: 18px;
-  color: #fff;
+  margin-bottom: 4px;
 }
 
-.game {
-  color: #b5b5b5;
-  font-size: 14px;
+.profile .game,
+.profile .details {
+  font-size: 13px;
+  line-height: 1.2;
+  margin-bottom: 3px;
 }
 
-.details {
-  font-size: 12px;
-  color: #89c2ff;
-}
+/* QUESTION */
 
 .question {
-  margin-top: 20px;
-  font-size: 17px;
+  margin: 18px 0 10px;
+  font-size: 20px;
 }
 
+/* STARS */
+
 .stars {
-  margin: 15px 0 20px;
-  font-size: 28px;
+  margin: 10px 0 20px;
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
 }
 
 .star {
   cursor: pointer;
   color: #555;
-  margin-right: 5px;
-  transition: 0.2s;
+  margin: 0 4px;
+  transition: color 0.2s ease;
 }
 
 .star.filled {
   color: #ffd900;
 }
 
+/* FEEDBACK */
+
 .feedback-label {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
+  color: #ccc;
   font-size: 14px;
-  color: #c4c4c4;
 }
 
 .feedback-input {
   width: 100%;
-  height: 90px;
-  border-radius: 10px;
-  background: #141622;
+  min-height: 90px;
+  /* أصغر شوية */
+  max-height: 250px;
+  resize: both;
+  /* تتوسع وتتقفل */
+  background: #141628;
+  /* لون مختلف عن الكارد */
   border: 1px solid #2d3248;
+  border-radius: 12px;
   padding: 10px;
   color: white;
-  resize: none;
   margin-bottom: 20px;
+  transition: 0.3s;
 }
 
-.submit-btn {
-  width: 100%;
-  background: #3d6ded;
+.feedback-input:focus {
+  border-color: #7424FA;
+  box-shadow: 0 0 10px rgba(116, 36, 250, 0.4);
+}
+
+/* ---------------- PURPLE BUTTON ---------------- */
+.glow-btn {
+  width: 80%;
+  padding: 14px;
   border: none;
-  padding: 12px;
-  border-radius: 10px;
-  font-size: 16px;
-  color: white;
+  border-radius: 12px;
   cursor: pointer;
-  transition: 0.2s;
+  font-size: 17px;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  background: linear-gradient(135deg, #9747E1, #7424FA);
+  box-shadow: 0 0 20px rgba(116, 36, 250, 0.45);
+  transition: 0.35s ease;
+
+  /* أهم حاجة لتوسيط الزرار */
+  display: block;
+  margin: 0 auto;
 }
 
-.submit-btn:hover {
-  background: #2f59cb;
-}
-
-.footer {
-  margin-top: 40px;
-  font-size: 13px;
-  color: #777;
+.glow-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 32px rgba(116, 36, 250, 0.75);
+  color: white;
 }
