@@ -12,13 +12,15 @@ import SignIn from './Component/Sign/SignIn';
 import SignUp from './Component/Sign/SignUp';
 
 export default function App() {
-  const [user, setUser] = useState(null); // المستخدم الحالي
+  const [user, setUser] = useState(null); 
   const [users, setUsers] = useState([]); 
 
   const routers = createBrowserRouter([
     {
       path: '/',
-      element: <Layout user={user} />,  // Navbar + Footer
+      element: <Layout user={user} />, 
+
+      
       children: [
         { index: true, element: <Landing /> },
         { path: 'home', element: <Home /> },

@@ -4,22 +4,20 @@ import "./Auth.css";
 
 export default function SignIn({ setUser, users }) {
   const navigate = useNavigate();
-  const [error, setError] = useState(""); // الحالة للرسالة
+  const [error, setError] = useState(""); 
 
   const handleSignIn = (e) => {
     e.preventDefault();
 
     const email = e.target.email.value;
     const password = e.target.password.value;
-
-    // تحقق من وجود المستخدم في users
     const existing = users.find(u => u.email === email && u.password === password);
 
     if (existing) {
-      setUser(existing); // نخزن المستخدم الحالي
-      navigate("/"); // نروح مباشرة للLanding
+      setUser(existing); 
+      navigate("/"); 
     } else {
-      setError("Invalid email or password!"); // نعرض رسالة خطأ
+      setError("Invalid email or password!"); 
     }
   };
 

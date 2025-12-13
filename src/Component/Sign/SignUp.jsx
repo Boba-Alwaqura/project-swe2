@@ -4,7 +4,7 @@ import "./Auth.css";
 
 export default function SignUp({ setUser, users, setUsers }) {
   const navigate = useNavigate();
-  const [error, setError] = useState(""); // لتخزين رسالة الخطأ
+  const [error, setError] = useState(""); 
 
   const handleSignUp = (e) => {
     e.preventDefault();
@@ -14,24 +14,24 @@ export default function SignUp({ setUser, users, setUsers }) {
     const password = e.target.password.value;
     const confirmPassword = e.target.confirmPassword.value;
 
-    // تحقق من كلمة السر
+    
     if (password !== confirmPassword) {
       setError("Passwords do not match!");
       return;
     }
 
-    // تحقق إذا الإيميل موجود مسبقًا
+  
     const existingUser = users.find(u => u.email === email);
     if (existingUser) {
       setError("You already have an account!");
       return;
     }
 
-    // تسجيل المستخدم الجديد
+    
     const newUser = { fullName, email, password };
-    setUsers([...users, newUser]); // نضيفه لمصفوفة المستخدمين
-    setUser(newUser); // نخزن المستخدم الحالي
-    navigate("/"); // نروح مباشرة للLanding
+    setUsers([...users, newUser]); 
+    setUser(newUser); 
+    navigate("/");
   };
 
   return (
@@ -60,7 +60,6 @@ export default function SignUp({ setUser, users, setUsers }) {
           <input type="password" name="confirmPassword" placeholder="Re-enter your password" required />
         </div>
 
-        {/* رسالة الخطأ */}
         {error && <p style={{ color: "red", textAlign: "center" }}>{error}</p>}
 
         <button type="submit" className="glow-btn auth-btn">Create Account</button>

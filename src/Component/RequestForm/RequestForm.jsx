@@ -6,12 +6,12 @@ export default function RequestForm() {
   const [ranked, setRanked] = useState(false);
 
   return (
-    <div className="rate-page"> {/* نفس خلفية الصفحة */}
-      <div className="request-form glass-card"> {/* الكارد نفسه */}
+    <div className="rate-page"> 
+      <div className="request-form glass-card"> 
         <h1>Create New Teammate Request</h1>
         <p>Follow these steps to find your perfect squad.</p>
 
-        {/* Tabs */}
+        
         <div className="tabs">
           <span className="active">Game & Prefs</span>
           <span>Requirements</span>
@@ -19,7 +19,6 @@ export default function RequestForm() {
           <span>Review</span>
         </div>
 
-        {/* Choose game */}
         <div className="section">
           <label>Choose Game</label>
           <select>
@@ -30,7 +29,6 @@ export default function RequestForm() {
           </select>
         </div>
 
-        {/* Toggles inside boxes */}
         <div className="toggle-row">
           <div className="toggle-box">
             <span>🎧 Voice Chat</span>
@@ -56,8 +54,7 @@ export default function RequestForm() {
             </label>
           </div>
         </div>
-
-        {/* Region */}
+        
         <div className="section">
           <label>Region / Server</label>
           <select>

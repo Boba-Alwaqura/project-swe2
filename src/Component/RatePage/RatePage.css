@@ -1,4 +1,4 @@
-/* ---------------- PAGE BACKGROUND LIKE LANDING PAGE ---------------- */
+
 
 .rate-page {
   min-height: 100vh;
@@ -36,7 +36,6 @@
   }
 }
 
-/* ---------------- RATE CARD ---------------- */
 
 .glass-card {
   background: rgba(31, 31, 45, 0.82);
@@ -59,8 +58,6 @@
   margin: auto;
 }
 
-/* ---------------- CONTENT ---------------- */
-
 .center {
   text-align: center;
 }
@@ -76,7 +73,6 @@
   margin-bottom: 25px;
 }
 
-/* PROFILE */
 
 .profile {
   display: flex;
@@ -103,14 +99,13 @@
   margin-bottom: 3px;
 }
 
-/* QUESTION */
 
 .question {
   margin: 18px 0 10px;
   font-size: 20px;
 }
 
-/* STARS */
+
 
 .stars {
   margin: 10px 0 20px;
@@ -130,7 +125,6 @@
   color: #ffd900;
 }
 
-/* FEEDBACK */
 
 .feedback-label {
   margin-bottom: 6px;
@@ -141,12 +135,9 @@
 .feedback-input {
   width: 100%;
   min-height: 90px;
-  /* أصغر شوية */
   max-height: 250px;
   resize: both;
-  /* تتوسع وتتقفل */
   background: #141628;
-  /* لون مختلف عن الكارد */
   border: 1px solid #2d3248;
   border-radius: 12px;
   padding: 10px;
@@ -160,7 +151,6 @@
   box-shadow: 0 0 10px rgba(116, 36, 250, 0.4);
 }
 
-/* ---------------- PURPLE BUTTON ---------------- */
 .glow-btn {
   width: 80%;
   padding: 14px;
@@ -173,8 +163,6 @@
   background: linear-gradient(135deg, #9747E1, #7424FA);
   box-shadow: 0 0 20px rgba(116, 36, 250, 0.45);
   transition: 0.35s ease;
-
-  /* أهم حاجة لتوسيط الزرار */
   display: block;
   margin: 0 auto;
 }

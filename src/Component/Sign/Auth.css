@@ -1,4 +1,4 @@
-/* -------- PAGE BACKGROUND -------- */
+
 .auth-page {
   min-height: 100vh;
   display: flex;
@@ -12,7 +12,6 @@
   padding: 20px;
 }
 
-/* -------- CARD -------- */
 .auth-card {
   width: 100%;
   max-width: 420px;
@@ -31,7 +30,6 @@
   border-color: #3b82f6;
 }
 
-/* -------- TEXT -------- */
 .auth-card h1 {
   text-align: center;
   color: #3b82f6;
@@ -46,7 +44,6 @@
   margin-bottom: 24px;
 }
 
-/* -------- INPUTS -------- */
 .auth-input {
   margin-bottom: 18px;
 }
@@ -75,13 +72,11 @@
   outline: none;
 }
 
-/* -------- BUTTON -------- */
 .auth-btn {
   width: 100%;
   margin-top: 10px;
 }
 
-/* -------- SWITCH TEXT -------- */
 .switch-text {
   text-align: center;
   margin-top: 16px;
