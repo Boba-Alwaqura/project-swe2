@@ -20,7 +20,7 @@ export default function App() {
       path: '/',
       element: <Layout user={user} />, 
 
-      
+
       children: [
         { index: true, element: <Landing /> },
         { path: 'home', element: <Home /> },
